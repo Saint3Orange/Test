@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+use App\Http\Controllers\InsertController;
+
+Route::get('/sub', 'InsertController@create');
+
+Route::post('/sub', 'InsertController@store');
